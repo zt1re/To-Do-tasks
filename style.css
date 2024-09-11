@@ -1,0 +1,79 @@
+    * {
+        box-sizing: border-box;
+        padding: 10px;
+        font-family: "Nunito", sans-serif;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add-task_btn {
+        border: 1px solid rgb(186, 184, 184);
+        border-radius: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+
+    }
+
+    .add-task_btn:hover {
+        background-color: rgb(232, 229, 229);
+    }
+
+    .custom-prompt {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+    }
+
+    .custom-prompt-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .custom-prompt-box input {
+      width: 92%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      border: 1px solid #cdcccc;
+    }
+
+    .btns {
+        display: flex;
+        gap: 5px;
+    }
+
+    .custom-prompt-box button {
+      flex: 1;
+      padding: 10px 20px;
+      background: #3498db;
+      border: none;
+      border-radius: 15px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .custom-prompt-box button:hover {
+      background: #2980b9;
+    }
+
+    .active {
+      visibility: visible;
+    }
