@@ -5,7 +5,7 @@ const customPrompt = document.querySelector('#customPrompt');
 const submitTask = () => {
     const taskLabel = userInput.value; 
 
-    if (taskLabel === "") {
+    if (taskLabel.trim() === "") {
         alert("Please enter a task!"); 
         return;
     }
