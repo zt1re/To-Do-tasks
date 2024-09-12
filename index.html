@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test</title>
+  <title>To Do tasks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
+  <script src="./main.js" defer></script>
 </head>
+
 <body>
-    <div class="container">
-        <h2>current tasks:</h2>
-        <button class="add-task_btn" onclick="showCustomPrompt()"">Add task</button>
+    <div class="main-container">
+      <div class="section1">
+        <div class="container">
+          <h2>current tasks:</h2>
+          <button class="add-task_btn" onclick="showCustomPrompt()"">+ Add Task</button>
+      </div>
+      <div class="current-tasks" id="currentTasks"></div>
+      </div>
+      <div class="section2">
+        <h2>completed tasks:</h2>
+      <div class="completed-tasks" id="completedTasks"></div>
+      </div>
     </div>
-    <div class="current-tasks" id="currentTasks"></div>
-    
-    <h2>completed tasks:</h2>
-
-    <div class="completed-tasks" id="completedTasks"></div>
-
   <!-- Custom Prompt -->
   <div class="custom-prompt" id="customPrompt">
     <div class="custom-prompt-box">

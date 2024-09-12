@@ -1,79 +1,220 @@
-    * {
-        box-sizing: border-box;
-        padding: 10px;
-        font-family: "Nunito", sans-serif;
-        font-weight: bold;
-    }
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+body {
+  background-image: url(./img1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    .add-task_btn {
-        border: 1px solid rgb(186, 184, 184);
-        border-radius: 20px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
+.main-container {
+  width: 80%;
+  max-width: 700px;
+  height: 90vh;
+  background-color: #f9fafb;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5vh auto;
+}
 
-    }
+.main-container > div {
+  margin-bottom: 50px;
+}
 
-    .add-task_btn:hover {
-        background-color: rgb(232, 229, 229);
-    }
+h2 {
+  color: #1f2937;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
 
-    .custom-prompt {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      visibility: hidden;
-    }
+.current-tasks > div , .completed-tasks > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
-    .custom-prompt-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 300px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
+.current-tasks  input , .completed-tasks  input {
+  width: 10px;
+}
 
-    .custom-prompt-box input {
-      width: 92%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 15px;
-      border: 1px solid #cdcccc;
-    }
+span {
+  padding-bottom: 2px;
+  font-size: 10px;
+  color: #374151;
+}
 
-    .btns {
-        display: flex;
-        gap: 5px;
-    }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
-    .custom-prompt-box button {
-      flex: 1;
-      padding: 10px 20px;
-      background: #3498db;
-      border: none;
-      border-radius: 15px;
-      color: white;
-      cursor: pointer;
-    }
+.add-task_btn {
+  cursor: pointer;
+  font-size: 8px;
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  transition: all 0.3s;
+}
 
-    .custom-prompt-box button:hover {
-      background: #2980b9;
-    }
+.add-task_btn:hover {
+  background-color: rgb(248, 245, 245);
+}
 
-    .active {
-      visibility: visible;
-    }
+.custom-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.custom-prompt-box {
+  font-size: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.custom-prompt-box input {
+  width: 100%;
+  font-size: 10px;
+  padding: 0.75em;
+  margin: 1em auto;
+  border-radius: 15px;
+  border: 1px solid #cdcccc;
+}
+
+.btns {
+  display: flex;
+  gap: 5px;
+}
+
+.custom-prompt-box button {
+  flex: 1;
+  font-size: 8px;
+  background: #3498db;
+  color: white;
+  padding: 0.75em 1.25em;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: backgroung 0.3s;
+}
+
+.custom-prompt-box button:hover {
+  background: #2980b9;
+}
+
+.active {
+  visibility: visible;
+}
+
+@media (min-width: 475px) {
+  .custom-prompt-box {
+    width: 200px;
+  }
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  .add-task_btn {
+    font-size: 10px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  .custom-prompt-box {
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .custom-prompt-box input {
+    font-size: 12px;
+  }
+
+  .custom-prompt-box button {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 830px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .add-task_btn {
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .current-tasks  input , .completed-tasks  input {
+    width: 20px; 
+  }
+
+  .custom-prompt-box {
+    font-size: 16px;
+  }
+
+  .custom-prompt-box input {
+    font-size: 14px;
+  }
+
+  .custom-prompt-box button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1120px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .add-task_btn {
+    font-size: 14px;
+  }
+
+  span {
+    font-size: 18px;
+  }
+
+  .custom-prompt-box {
+    font-size: 20px;
+    width: 300px;
+  }
+
+  .custom-prompt-box input {
+    font-size: 16px;
+  }
+
+  .custom-prompt-box button {
+    font-size: 14px;
+  }
+}
+
