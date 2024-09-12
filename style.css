@@ -136,7 +136,7 @@ span {
 
 @media (min-width: 640px) {
   h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .add-task_btn {
@@ -193,7 +193,7 @@ span {
 
 @media (min-width: 1120px) {
   h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .add-task_btn {
@@ -201,11 +201,11 @@ span {
   }
 
   span {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .custom-prompt-box {
-    font-size: 20px;
+    font-size: 18px;
     width: 300px;
   }
 
