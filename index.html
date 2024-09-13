@@ -12,19 +12,19 @@
 </head>
 
 <body>
-    <div class="main-container">
-      <div class="section1">
-        <div class="container">
-          <h2>current tasks:</h2>
-          <button class="add-task_btn" onclick="showCustomPrompt()"">+ Add Task</button>
+  <div class="main-container">
+    <div class="section1">
+      <div class="container">
+        <h2>current tasks:</h2>
+        <button class="add-task_btn" onclick="showCustomPrompt()"">+ Add Task</button>
       </div>
       <div class="current-tasks" id="currentTasks"></div>
-      </div>
-      <div class="section2">
-        <h2>completed tasks:</h2>
-      <div class="completed-tasks" id="completedTasks"></div>
-      </div>
     </div>
+    <div class="section2">
+      <h2>completed tasks:</h2>
+      <div class="completed-tasks" id="completedTasks"></div>
+    </div>
+  </div>
   <!-- Custom Prompt -->
   <div class="custom-prompt" id="customPrompt">
     <div class="custom-prompt-box">
@@ -32,11 +32,9 @@
       <input type="text" id="userInput" placeholder="Your task here">
       <div class="btns">
         <button onclick="removeCustomPrompt()">Cancel</button>
-        <button class="btn" id="submit">Submit</button>
+        <button onclick="submitTask()">Submit</button>
       </div>
     </div>
   </div>
-
-
 </body>
 </html>

@@ -1,9 +1,10 @@
 const currentTasks = document.querySelector('#currentTasks');
 const completedTasks = document.querySelector('#completedTasks');
 const customPrompt = document.querySelector('#customPrompt');
+const userInput = document.querySelector('#userInput');
 
-const submitTask = () => {
-    const taskLabel = userInput.value; 
+function submitTask() {
+    let taskLabel = userInput.value; 
 
     if (taskLabel.trim() === "") {
         alert("Please enter a task!"); 
@@ -17,9 +18,13 @@ const submitTask = () => {
     newTaskcheckbox.type = 'checkbox';
     newTaskLabel.textContent = taskLabel;
 
-    newTaskcheckbox.addEventListener('click', () => {
-        completedTasks.appendChild(newTask);
-        currentTasks.removeChild(newTask);
+    newTaskcheckbox.addEventListener('change', () => {
+        if (newTaskcheckbox.checked) {
+            completedTasks.appendChild(newTask);
+        }
+        else {
+            currentTasks.appendChild(newTask);
+        }
     });
 
     newTask.appendChild(newTaskcheckbox);
@@ -27,11 +32,14 @@ const submitTask = () => {
     currentTasks.appendChild(newTask);
 
     customPrompt.classList.remove('active');
-
+    userInput.value = '';
 };
 
-submit.addEventListener('click', submitTask);
-
+userInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        submitTask();
+    }
+});
 
 function showCustomPrompt() {
     customPrompt.classList.add('active');
